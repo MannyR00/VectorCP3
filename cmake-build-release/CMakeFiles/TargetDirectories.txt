@@ -1,0 +1,7 @@
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/benchmark.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/benchmark-basic.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/benchmark-vectorized.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/benchmark-blas.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/benchmark-openmp.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/edit_cache.dir
+/Users/luisramirezjr./CP-3/cmake-build-release/CMakeFiles/rebuild_cache.dir

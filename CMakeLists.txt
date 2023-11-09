@@ -27,7 +27,9 @@ if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Intel")
    set(VFLAGS -O2 -xMIC-AVX512 -qopt-report=2 -qopt-report-phase=vec)
 #   message(STATUS "vectorization flags for icc compiler are" ${VectorizationFlags})
 endif ()
-
+if (APPLE)
+   include_directories("/opt/homebrew/opt/openblas/include")
+endif (APPLE)
 # clang compiler stuff not ready yet
 #if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
 #   message(STATUS "setting vector flags for clang++ compiler = " ${CMAKE_C_COMPILER_ID})

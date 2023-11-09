@@ -1,0 +1,8 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/luisramirezjr./CP-3 -B /Users/luisramirezjr./CP-3/cmake-build-release
+-- compiler = AppleClang
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/luisramirezjr./CP-3/cmake-build-release
+
+Problems were encountered while collecting compiler information:
+	clang: error: unsupported option '-fopenmp'

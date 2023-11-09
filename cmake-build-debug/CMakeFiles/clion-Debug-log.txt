@@ -1,0 +1,2 @@
+/opt/homebrew/Cellar/cmake/3.27.7/bin/ccmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja /opt/homebrew/Cellar/gcc/13.2.0/bin/g++-13 -G Ninja -S /Users/luisramirezjr./CP-3 -B /Users/luisramirezjr./CP-3/cmake-build-debug
+Error opening terminal: unknown.

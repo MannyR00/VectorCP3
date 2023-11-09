@@ -13,7 +13,7 @@
 #include <random>
 #include <vector>
 
-#include <cmath> // For: fabs
+#include <cmath> // For:2 fabs
 
 #include <cblas.h>
 #include <string.h>
