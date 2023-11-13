@@ -51,8 +51,7 @@ build cmake_object_order_depends_target_benchmark: phony || CMakeFiles/benchmark
 
 build CMakeFiles/benchmark.dir/benchmark.cpp.o: CXX_COMPILER__benchmark_unscanned_Release /Users/luisramirezjr./CP-3/benchmark.cpp || cmake_object_order_depends_target_benchmark
   DEP_FILE = CMakeFiles/benchmark.dir/benchmark.cpp.o.d
-  FLAGS = -O0 -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/opt/openblas/include
+  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/benchmark.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark.dir
 
@@ -74,8 +73,7 @@ build cmake_object_order_depends_target_benchmark-basic: phony || cmake_object_o
 
 build CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o: CXX_COMPILER__benchmark-basic_unscanned_Release /Users/luisramirezjr./CP-3/dgemv-basic.cpp || cmake_object_order_depends_target_benchmark-basic
   DEP_FILE = CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o.d
-  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -Wall -pedantic -march=native -O1
-  INCLUDES = -I/opt/homebrew/opt/openblas/include
+  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -pedantic -march=native -O1
   OBJECT_DIR = CMakeFiles/benchmark-basic.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark-basic.dir
 
@@ -87,9 +85,9 @@ build CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o: CXX_COMPILER__benchmark-
 #############################################
 # Link the executable benchmark-basic
 
-build benchmark-basic: CXX_EXECUTABLE_LINKER__benchmark-basic_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o || benchmark
+build benchmark-basic: CXX_EXECUTABLE_LINKER__benchmark-basic_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o | /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib || benchmark
   FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
-  LINK_LIBRARIES = -Xlinker -framework -Xlinker Accelerate
+  LINK_LIBRARIES = -Wl,-rpath,/Users/luisramirezjr./anaconda3/lib  /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib
   OBJECT_DIR = CMakeFiles/benchmark-basic.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -107,8 +105,7 @@ build cmake_object_order_depends_target_benchmark-vectorized: phony || cmake_obj
 
 build CMakeFiles/benchmark-vectorized.dir/dgemv-vectorized.cpp.o: CXX_COMPILER__benchmark-vectorized_unscanned_Release /Users/luisramirezjr./CP-3/dgemv-vectorized.cpp || cmake_object_order_depends_target_benchmark-vectorized
   DEP_FILE = CMakeFiles/benchmark-vectorized.dir/dgemv-vectorized.cpp.o.d
-  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -Wall -pedantic
-  INCLUDES = -I/opt/homebrew/opt/openblas/include
+  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -pedantic -O3 -DNDEBUG -fomit-frame-pointer -ftree-vectorize -funroll-loops -ffast-math -fopt-info-vec-all=report.txt
   OBJECT_DIR = CMakeFiles/benchmark-vectorized.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark-vectorized.dir
 
@@ -120,9 +117,9 @@ build CMakeFiles/benchmark-vectorized.dir/dgemv-vectorized.cpp.o: CXX_COMPILER__
 #############################################
 # Link the executable benchmark-vectorized
 
-build benchmark-vectorized: CXX_EXECUTABLE_LINKER__benchmark-vectorized_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-vectorized.dir/dgemv-vectorized.cpp.o || benchmark
+build benchmark-vectorized: CXX_EXECUTABLE_LINKER__benchmark-vectorized_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-vectorized.dir/dgemv-vectorized.cpp.o | /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib || benchmark
   FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
-  LINK_LIBRARIES = -Xlinker -framework -Xlinker Accelerate
+  LINK_LIBRARIES = -Wl,-rpath,/Users/luisramirezjr./anaconda3/lib  /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib
   OBJECT_DIR = CMakeFiles/benchmark-vectorized.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -140,8 +137,7 @@ build cmake_object_order_depends_target_benchmark-blas: phony || cmake_object_or
 
 build CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o: CXX_COMPILER__benchmark-blas_unscanned_Release /Users/luisramirezjr./CP-3/dgemv-blas.cpp || cmake_object_order_depends_target_benchmark-blas
   DEP_FILE = CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o.d
-  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -Wall -pedantic -march=native
-  INCLUDES = -I/opt/homebrew/opt/openblas/include
+  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -pedantic -march=native
   OBJECT_DIR = CMakeFiles/benchmark-blas.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark-blas.dir
 
@@ -153,9 +149,9 @@ build CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o: CXX_COMPILER__benchmark-bl
 #############################################
 # Link the executable benchmark-blas
 
-build benchmark-blas: CXX_EXECUTABLE_LINKER__benchmark-blas_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o || benchmark
+build benchmark-blas: CXX_EXECUTABLE_LINKER__benchmark-blas_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o | /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib || benchmark
   FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
-  LINK_LIBRARIES = -Xlinker -framework -Xlinker Accelerate
+  LINK_LIBRARIES = -Wl,-rpath,/Users/luisramirezjr./anaconda3/lib  /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib
   OBJECT_DIR = CMakeFiles/benchmark-blas.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -173,8 +169,7 @@ build cmake_object_order_depends_target_benchmark-openmp: phony || cmake_object_
 
 build CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o: CXX_COMPILER__benchmark-openmp_unscanned_Release /Users/luisramirezjr./CP-3/dgemv-openmp.cpp || cmake_object_order_depends_target_benchmark-openmp
   DEP_FILE = CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o.d
-  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -fopenmp -Wall -pedantic -march=native -O1
-  INCLUDES = -I/opt/homebrew/opt/openblas/include
+  FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -fopenmp -Wall -pedantic -march=native -O1
   OBJECT_DIR = CMakeFiles/benchmark-openmp.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark-openmp.dir
 
@@ -186,10 +181,10 @@ build CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o: CXX_COMPILER__benchmar
 #############################################
 # Link the executable benchmark-openmp
 
-build benchmark-openmp: CXX_EXECUTABLE_LINKER__benchmark-openmp_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o || benchmark
+build benchmark-openmp: CXX_EXECUTABLE_LINKER__benchmark-openmp_Release CMakeFiles/benchmark.dir/benchmark.cpp.o CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o | /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib || benchmark
   FLAGS = -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   LINK_FLAGS = -fopenmp
-  LINK_LIBRARIES = -Xlinker -framework -Xlinker Accelerate
+  LINK_LIBRARIES = -Wl,-rpath,/Users/luisramirezjr./anaconda3/lib  /Users/luisramirezjr./anaconda3/lib/libopenblas.dylib
   OBJECT_DIR = CMakeFiles/benchmark-openmp.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -239,14 +234,14 @@ build all: phony benchmark benchmark-basic benchmark-vectorized benchmark-blas b
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindBLAS.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/luisramirezjr./CP-3/CMakeLists.txt /Users/luisramirezjr./CP-3/job.in CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindBLAS.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/luisramirezjr./CP-3/CMakeLists.txt /Users/luisramirezjr./CP-3/job.in CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindBLAS.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/luisramirezjr./CP-3/CMakeLists.txt /Users/luisramirezjr./CP-3/job.in CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindBLAS.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/luisramirezjr./CP-3/CMakeLists.txt /Users/luisramirezjr./CP-3/job.in CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

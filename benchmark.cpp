@@ -93,20 +93,35 @@ int main(int argc, char** argv)
         memcpy((void *)Ycopy, (const void *)Y, sizeof(double)*n);
 
         // insert start timer code here
-
+        std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
         // call the method to do the work
         my_dgemv(n, A, X, Y); 
 
         // insert end timer code here, and print out the elapsed time for this problem size
+       std::chrono::time_point<std::chrono::high_resolution_clock> end = std::chrono::high_resolution_clock::now();
+       std::chrono::duration<double> timePassed = end - start;
 
+        int result1 = 2 * n;
+        int powerResults = pow(result1, 2);
 
+       std::cout << " MFLOP/s: " << ((powerResults / timePassed.count()) / 1000000)  << std::endl;
+
+       printf(" Elapsed time: %f seconds\n \n", timePassed.count());
+      
         // now invoke the cblas method to compute the matrix-vector multiplye
         reference_dgemv(n, Acopy, Xcopy, Ycopy);
+
+       
+
+
+        
+
 
         // compare your result with that computed by BLAS
         if (check_accuracy(Ycopy, Y, n) == false)
            printf(" Error: your answer is not the same as that computed by BLAS. \n");
     
+
     } // end loop over problem sizes
 
     return 0;

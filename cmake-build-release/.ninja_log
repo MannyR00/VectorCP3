@@ -1,0 +1,10 @@
+# ninja log v5
+2	211	1699590601180718266	CMakeFiles/benchmark-blas.dir/dgemv-blas.cpp.o	5fa98905fc6d7912
+80	110	1699589174836798149	benchmark-openmp	530e78e11965259e
+0	80	1699589174807287819	CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o	8ec384e3910cd554
+40	69	1699586651751168749	benchmark-basic	9a87c618132e5318
+1	40	1699586651721796081	CMakeFiles/benchmark-basic.dir/dgemv-basic.cpp.o	d132555a9fced2
+1	391	1699590601363037820	CMakeFiles/benchmark.dir/benchmark.cpp.o	cb941da220b99c79
+391	423	1699590601395219770	benchmark-blas	597372948553d7ef
+0	75	1699591982245575364	build.ninja	c42eb37a2de704ab
+1	122	1699592011679654957	CMakeFiles/benchmark-openmp.dir/dgemv-openmp.cpp.o	5aabd39a903814cb
