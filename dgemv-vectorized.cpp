@@ -12,7 +12,6 @@ void my_dgemv(int n, double* A, double* x, double* y) {
 
    // This will allow us to loop through the rows of matrix A
     for (int i = 0; i < n; ++i) {
-        y[i] = 0.0;
 
         // This will allow us to loop through the columns of matrix A.
         for (int j = 0; j < n; ++j) {

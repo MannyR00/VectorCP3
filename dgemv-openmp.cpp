@@ -31,7 +31,6 @@ void my_dgemv(int n, double* A, double* x, double* y) {
    #pragma omp parallel for
     for (int i = 0; i < n; ++i) {
        // The variable "i" will be automatically creating each thread for us
-        y[i] = 0.0;
 
         // This will help initialize the result for the row we're on with "Y"
         for (int j = 0; j < n; ++j) {
