@@ -1,4 +1,5 @@
 #include <iostream>
+#include <numeric>
 const char* dgemv_desc = "Vectorized implementation of matrix-vector multiply.";
 
 /*
@@ -9,13 +10,14 @@ const char* dgemv_desc = "Vectorized implementation of matrix-vector multiply.";
  */
 void my_dgemv(int n, double* A, double* x, double* y) {
 
-    // Loops through each row of the Matrix in A
- for (int i = 0; i < n; ++i) {
-        double sum = 0.0;
-// This will help compute the dot product of the Matrix
-        for (int j = 0; j < n; ++j) {
-            sum += A[i * n + j] * x[j];
-        }
-        y[i] += sum;
+ 
+    for (int row = 0; row < n; ++row) {
+        int offset = row * n;
+
+       
+        double t = std::inner_product(&A[offset], &A[offset] + n, x, 0.0);
+
+    
+        y[row] += t;
     }
- }
+}
