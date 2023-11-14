@@ -106,6 +106,8 @@ int main(int argc, char** argv)
 
        std::cout << " MFLOP/s: " << ((powerResults / timePassed.count()) / 1000000)  << std::endl;
 
+       std::cout << "Memory Bandwidth: " << ((2 * n + 2 * pow(n, 2)) * 8.0 / 1e9 / timePassed.count() / 204.8) * 100 << std::endl;
+
        printf(" Elapsed time: %f seconds\n \n", timePassed.count());
       
         // now invoke the cblas method to compute the matrix-vector multiplye
