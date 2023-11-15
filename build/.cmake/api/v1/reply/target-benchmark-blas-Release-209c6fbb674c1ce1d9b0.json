@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 54,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 55,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 57,
+				"line" : 56,
 				"parent" : 0
 			}
 		]
@@ -49,7 +49,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-I /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/Headers/ -O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk"
+					"fragment" : "-O0 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk"
 				},
 				{
 					"backtrace" : 3,
@@ -62,6 +62,12 @@
 				{
 					"backtrace" : 3,
 					"fragment" : "-march=native"
+				}
+			],
+			"frameworks" : 
+			[
+				{
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework"
 				}
 			],
 			"language" : "CXX",
@@ -84,20 +90,15 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-I /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/Headers/ -O0",
+				"fragment" : "-O0",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-L/opt/homebrew/Cellar/openblas/0.3.24/lib/",
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/Users/luisramirezjr./anaconda3/lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "/Users/luisramirezjr./anaconda3/lib/libopenblas.dylib",
+				"fragment" : "-Xlinker -framework -Xlinker Accelerate",
 				"role" : "libraries"
 			}
 		],

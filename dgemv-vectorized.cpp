@@ -10,14 +10,17 @@ const char* dgemv_desc = "Vectorized implementation of matrix-vector multiply.";
  */
 void my_dgemv(int n, double* A, double* x, double* y) {
 
- 
+ // This will loop through each row in the A Matrix
     for (int row = 0; row < n; ++row) {
-        int offset = row * n;
+        int sum = row * n;
 
-       
-        double t = std::inner_product(&A[offset], &A[offset] + n, x, 0.0);
-
+       // Using the inner product will help me do the dot product
+       double t = 0;
+    for (int j = 0; j < n; ++j) {
+    t += A[sum + j] * x[j];
+    }
     
+    // This will give us the result corresponding in the vector y.
         y[row] += t;
     }
 }

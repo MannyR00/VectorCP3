@@ -2,6 +2,34 @@
 	"entries" : 
 	[
 		{
+			"name" : "BLAS_Accelerate_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework"
+		},
+		{
+			"name" : "BLAS_Accelerate_WORKS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have function dgemm_"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "BLAS_WORKS",
 			"properties" : 
 			[
@@ -12,6 +40,166 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
+		},
+		{
+			"name" : "BLAS_acml_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_acml_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_acml_mp_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_acml_mp_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_armpl_lp64_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_armpl_lp64_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_blas_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/lib/libblas.tbd"
+		},
+		{
+			"name" : "BLAS_blis_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_blis_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_complib_sgimath_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_complib_sgimath_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_cxml_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_cxml_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_dxml_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_dxml_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_essl_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_essl_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_f77blas_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_f77blas_LIBRARY-NOTFOUND"
 		},
 		{
 			"name" : "BLAS_flexiblas_LIBRARY",
@@ -155,19 +343,55 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/lib/libopenblas.dylib"
+			"value" : "BLAS_openblas_LIBRARY-NOTFOUND"
 		},
 		{
-			"name" : "BLAS_openblas_WORKS",
+			"name" : "BLAS_scs_LIBRARY",
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
-					"value" : "Have function sgemm_"
+					"value" : "Path to a library."
 				}
 			],
-			"type" : "INTERNAL",
-			"value" : "1"
+			"type" : "FILEPATH",
+			"value" : "BLAS_scs_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_sgemm_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_sgemm_LIBRARY-NOTFOUND"
+		},
+		{
+			"name" : "BLAS_sunperf_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "BLAS_sunperf_LIBRARY-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -199,7 +423,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/bin/ar"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ar"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -207,11 +431,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -223,7 +447,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/luisramirezjr./CP-3/build"
+			"value" : "/Users/luisramirezjr./VectorCP3/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -327,39 +551,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/g++-13"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER_AR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-ar-13"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER_RANLIB",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-ranlib-13"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/c++"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -375,7 +567,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-I /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/Headers/"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
@@ -455,39 +647,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-13"
-		},
-		{
-			"name" : "CMAKE_C_COMPILER_AR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-ar-13"
-		},
-		{
-			"name" : "CMAKE_C_COMPILER_RANLIB",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/Cellar/gcc/13.2.0/bin/gcc-ranlib-13"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/cc"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -623,7 +783,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-L/opt/homebrew/Cellar/openblas/0.3.24/lib/"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_DEBUG",
@@ -694,16 +854,12 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : "Enable/Disable output of compile commands during generation."
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "BOOL",
-			"value" : ""
+			"value" : "TRUE"
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
@@ -727,7 +883,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/luisramirezjr./CP-3/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/luisramirezjr./VectorCP3/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -799,7 +955,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/luisramirezjr./CP-3"
+			"value" : "/Users/luisramirezjr./VectorCP3"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -843,7 +999,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/bin/ld"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ld"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -875,7 +1031,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-L/opt/homebrew/Cellar/openblas/0.3.24/lib/"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS_DEBUG",
@@ -955,7 +1111,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/bin/nm"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/nm"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -999,7 +1155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objdump"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/objdump"
 		},
 		{
 			"name" : "CMAKE_OSX_ARCHITECTURES",
@@ -1099,7 +1255,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/bin/ranlib"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/ranlib"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1143,7 +1299,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-L/opt/homebrew/Cellar/openblas/0.3.24/lib/"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS_DEBUG",
@@ -1335,7 +1491,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/Users/luisramirezjr./anaconda3/bin/strip"
+			"value" : "/Library/Developer/CommandLineTools/usr/bin/strip"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1391,7 +1547,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/Users/luisramirezjr./anaconda3/lib/libopenblas.dylib][v()]"
+			"value" : "[/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Accelerate.framework][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1415,7 +1571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/luisramirezjr./CP-3/build"
+			"value" : "/Users/luisramirezjr./VectorCP3/build"
 		},
 		{
 			"name" : "cp3_IS_TOP_LEVEL",
@@ -1439,7 +1595,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/luisramirezjr./CP-3"
+			"value" : "/Users/luisramirezjr./VectorCP3"
 		}
 	],
 	"kind" : "cache",
